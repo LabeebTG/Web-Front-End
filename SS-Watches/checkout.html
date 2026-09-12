@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSwatches - Checkout</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>SS Watches</h1>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        <nav class="side-nav">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="products.html"><i class="fas fa-box-open"></i>Products</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i>Cart</a></li>
+            </ul>
+        </nav>
+        <div class="overlay" onclick="toggleMenu()"></div> 
+    </header>
+
+    <main>
+        <h2>Checkout</h2>
+        <p>Total Amount: <strong>Rs. <span id="checkout-total">0</span></strong></p>
+
+        <h3>Enter Your Details</h3>
+        <form id="checkout-form">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="address">Shipping Address:</label>
+            <textarea id="address" required></textarea>
+
+            <h3>Select Payment Method</h3>
+            <label>
+                <input type="radio" name="payment" value="bank" required> Visa
+            </label>
+            <label>
+                <input type="radio" name="payment" value="bank" required> Debit Card           </label>
+            <label>
+                <input type="radio" name="payment" value="bank" required> Bank Transfer
+            </label>
+
+            <label for="transaction-id">Transaction ID:</label>
+            <input type="text" id="transaction-id" required placeholder="Enter Transaction ID">
+
+            <button type="submit">Confirm Order</button>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
